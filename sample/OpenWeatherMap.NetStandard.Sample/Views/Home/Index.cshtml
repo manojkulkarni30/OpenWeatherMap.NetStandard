@@ -1,0 +1,44 @@
+﻿@model OpenWeatherMap.NetStandard.Sample.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center">OpenWeatherMap.NetStandard</h1>
+</div>
+
+<form asp-antiforgery="true" asp-action="Index" id="get-weather">
+    <div class="input-group">
+        <input type="text" asp-for="CityName" class="form-control" placeholder="Enter City Name" aria-describedby="basic-addon2" data-js-id="city-name">
+        <span class="input-group-addon" id="basic-addon2" data-js-id="get-weather">Get Weather</span>
+    </div>
+</form>
+
+@if (Model.WeatherApiResponse != null)
+{
+    <div class="media">
+        <div class="media-left">
+            <img alt="64x64" class="media-object" src="@Model.WeatherApiResponse.MoreWeatherInformation[0].DisplayIcon">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">@Model.WeatherApiResponse.Name,@Model.WeatherApiResponse.InternalParameters.CountryCode <span class="badge">@Model.WeatherApiResponse.Weather.Temperature &deg;C</span></h4>
+            <p>@Model.WeatherApiResponse.MoreWeatherInformation[0].Description</p>
+        </div>
+    </div>
+}
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('span[data-js-id]').on("click", function () {
+                if ($('input[data-js-id="city-name"]').val()) {
+                    $('#get-weather').submit();
+                }
+                else {
+                    alert("Please enter city name");
+                }
+            });
+        });
+    </script>
+}

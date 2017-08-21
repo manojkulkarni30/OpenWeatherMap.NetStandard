@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B242A76-C34C-4B9E-9623-3D28AC0B1BAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMap.NetStandard", "src\OpenWeatherMap.NetStandard\OpenWeatherMap.NetStandard.csproj", "{89B5AD73-BD00-4C8C-B3A9-56CF37229E68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherMap.NetStandard", "src\OpenWeatherMap.NetStandard\OpenWeatherMap.NetStandard.csproj", "{89B5AD73-BD00-4C8C-B3A9-56CF37229E68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{422B8F78-A3C5-49E9-81E0-6A4222986F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMap.NetStandard.Sample", "sample\OpenWeatherMap.NetStandard.Sample\OpenWeatherMap.NetStandard.Sample.csproj", "{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{89B5AD73-BD00-4C8C-B3A9-56CF37229E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B5AD73-BD00-4C8C-B3A9-56CF37229E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B5AD73-BD00-4C8C-B3A9-56CF37229E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{89B5AD73-BD00-4C8C-B3A9-56CF37229E68} = {1B242A76-C34C-4B9E-9623-3D28AC0B1BAC}
+		{22BC66B9-7BEE-4858-A929-EEC35C4E31EC} = {422B8F78-A3C5-49E9-81E0-6A4222986F5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4426815-D29C-41BD-952F-862092FF42B9}
