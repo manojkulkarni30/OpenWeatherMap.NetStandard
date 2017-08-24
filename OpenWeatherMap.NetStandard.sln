@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B242A76-C34C-4B9E-9623-3D28AC0B1BAC}"
 EndProject
@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherMap.NetStandard"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{422B8F78-A3C5-49E9-81E0-6A4222986F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMap.NetStandard.Sample", "sample\OpenWeatherMap.NetStandard.Sample\OpenWeatherMap.NetStandard.Sample.csproj", "{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherMap.NetStandard.Sample", "sample\OpenWeatherMap.NetStandard.Sample\OpenWeatherMap.NetStandard.Sample.csproj", "{22BC66B9-7BEE-4858-A929-EEC35C4E31EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{97565BBF-0DAC-4127-A166-697F2B0FB6FA}"
+	ProjectSection(SolutionItems) = preProject
+		cake.config = cake.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

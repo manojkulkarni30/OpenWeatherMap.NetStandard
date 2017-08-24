@@ -38,7 +38,7 @@ namespace OpenWeatherMap.NetStandard
         /// </summary>
         /// <param name="cityName">City Name</param>
         /// <param name="countryCode">Country Code</param>
-        /// <param name="unit">Unit</param>
+        /// <param name="unit">Unit. Default unit is imperial (Fahrenheit). To get temperature in celsius use Metric</param>
         /// <param name="searchAccuracy">Search Accuracy. Available options are like (close result) or accurate (accurate result)</param>
         /// <param name="responseType">Return response in JSON OR XML format. Default response type is JSON</param>
         /// <returns></returns>
