@@ -48,5 +48,11 @@ namespace OpenWeatherMap.NetStandard.Models
         /// </summary>
         [JsonProperty("grnd_level")]
         public double GroundLevelPressure { get; set; }
+
+        /// <summary>
+        /// Internal Parameter
+        /// </summary>
+        [JsonProperty("temp_kf")]
+        public double TempKf { get; set; }
     }
 }

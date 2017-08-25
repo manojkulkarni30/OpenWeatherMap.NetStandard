@@ -27,6 +27,10 @@ namespace OpenWeatherMap.NetStandard.Sample.Controllers
                 homeViewModel.WeatherApiResponse = await openWeatherMapClient
                     .GetWeatherByCityNameAsync(cityName,
                     unit:Unit.Metric);
+
+                homeViewModel.FiveDayWeatherForecast = await openWeatherMapClient
+                   .GetFiveDayWeatherForcastByCityNameAsync(cityName,
+                   unit: Unit.Metric);
             }
             return View(homeViewModel);
         }

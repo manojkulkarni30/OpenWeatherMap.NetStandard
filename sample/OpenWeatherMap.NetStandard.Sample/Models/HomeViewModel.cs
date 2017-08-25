@@ -6,6 +6,8 @@ namespace OpenWeatherMap.NetStandard.Sample.Models
     {
         public string CityName { get; set; }
 
-        public WeatherApiResponse WeatherApiResponse { get; set; }
+        public CurrentWeatherApiResponse WeatherApiResponse { get; set; }
+
+        public ForecastWeatherApiResponse FiveDayWeatherForecast { get; set; }
     }
 }

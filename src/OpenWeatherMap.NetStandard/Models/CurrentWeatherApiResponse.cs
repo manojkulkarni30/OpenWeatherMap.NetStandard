@@ -2,7 +2,7 @@
 
 namespace OpenWeatherMap.NetStandard.Models
 {
-    public class WeatherApiResponse
+    public class CurrentWeatherApiResponse
     {
         /// <summary>
         /// Geolocation information of city
@@ -71,7 +71,7 @@ namespace OpenWeatherMap.NetStandard.Models
         public MoreWeatherInformation[] MoreWeatherInformation { get; set; }
 
         /// <summary>
-        /// Wind
+        /// Wind Information
         /// </summary>
         [JsonProperty("wind")]
         public Wind Wind { get; set; }

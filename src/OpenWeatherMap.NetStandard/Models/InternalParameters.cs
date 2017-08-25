@@ -32,7 +32,8 @@ namespace OpenWeatherMap.NetStandard.Models
         [JsonProperty("sunset")]
         public double SunsetTime { get; set; }
 
-
+        [JsonProperty("pod")]
+        public string Pod { get; set; }
     }
 
 }

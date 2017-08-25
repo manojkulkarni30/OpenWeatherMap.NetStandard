@@ -27,6 +27,44 @@
     </div>
 }
 
+<hr />
+<div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#fiveday" aria-controls="fiveday" role="tab" data-toggle="tab">5 Days Weather Forecast</a></li>
+        <li role="presentation"><a href="#sixteendays" aria-controls="sixteendays" role="tab" data-toggle="tab">16 Days Weather Forecast</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="fiveday">
+            <br />
+            @if (Model.FiveDayWeatherForecast != null && Model.FiveDayWeatherForecast.List != null)
+            {
+                foreach (var info in Model.FiveDayWeatherForecast.List)
+                {
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img alt="64x64" class="media-object" src="@info.MoreWeatherInformation[0].DisplayIcon">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">@Model.FiveDayWeatherForecast.City.Name,@Model.FiveDayWeatherForecast.City.CountryCode <span class="badge">@info.Weather.Temperature &deg;C</span></h4>
+                                    <p>@info.DateTime</p>
+                                    <p>@info.MoreWeatherInformation[0].Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sixteendays">...</div>
+    </div>
+
+</div>
+
 
 @section scripts{
     <script>
