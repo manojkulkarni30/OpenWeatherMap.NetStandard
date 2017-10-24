@@ -52,14 +52,14 @@ namespace OpenWeatherMap.NetStandard
         {
             if (string.IsNullOrWhiteSpace(countryCode))
                 return await _openWeatherMapApiService
-                    .GetWeatherByCityName(cityName: cityName,
+                    .GetWeatherByCityNameAsync(cityName: cityName,
                     unit: unit.ToString().ToLower(),
                     searchAccuracy: searchAccuracy.ToString().ToLower(),
                     responseType: responseType.ToString().ToLower(),
                     apiKey: _apiKey);
 
             return await _openWeatherMapApiService
-                .GetWeatherByCityNameAndCountryCode(cityName: cityName,
+                .GetWeatherByCityNameAndCountryCodeAsync(cityName: cityName,
                 countryCode: countryCode,
                 unit: unit.ToString().ToLower(),
                 searchAccuracy: searchAccuracy.ToString().ToLower(),
@@ -81,7 +81,7 @@ namespace OpenWeatherMap.NetStandard
             ResponseType responseType = DefaultResponseType)
         {
             return await _openWeatherMapApiService
-                .GetWeatherByCityId(cityId: cityId,
+                .GetWeatherByCityIdAsync(cityId: cityId,
                 unit: unit.ToString().ToLower(),
                 searchAccuracy: searchAccuracy.ToString().ToLower(),
                 responseType: responseType.ToString().ToLower(),
@@ -103,7 +103,7 @@ namespace OpenWeatherMap.NetStandard
             ResponseType responseType = DefaultResponseType)
         {
             return await _openWeatherMapApiService
-                .GetWeatherByGeographicCoordinates(latitude: latitude,
+                .GetWeatherByGeographicCoordinatesAsync(latitude: latitude,
                 longitude: longitude,
                 unit: unit.ToString().ToLower(),
                 searchAccuracy: searchAccuracy.ToString().ToLower(),
@@ -126,7 +126,7 @@ namespace OpenWeatherMap.NetStandard
             ResponseType responseType = DefaultResponseType)
         {
             return await _openWeatherMapApiService
-                .GetWeatherByZipCode(zipCode: zipCode,
+                .GetWeatherByZipCodeAsync(zipCode: zipCode,
                 countryCode: countryCode,
                 unit: unit.ToString().ToLower(),
                 searchAccuracy: searchAccuracy.ToString().ToLower(),
@@ -135,10 +135,10 @@ namespace OpenWeatherMap.NetStandard
         }
         #endregion
 
-        #region Five Day Weather Forcast API Methods
+        #region Five Day Weather Forecast API Methods
 
         /// <summary>
-        /// Get Weather By City Name
+        /// Get Five Days Weather Forecast By City Name
         /// </summary>
         /// <param name="cityName">City Name</param>
         /// <param name="countryCode">Country Code</param>
@@ -146,7 +146,7 @@ namespace OpenWeatherMap.NetStandard
         /// <param name="searchAccuracy">Search Accuracy. Available options are like (close result) or accurate (accurate result)</param>
         /// <param name="responseType">Return response in JSON OR XML format. Default response type is JSON</param>
         /// <returns></returns>
-        public async Task<ForecastWeatherApiResponse> GetFiveDayWeatherForcastByCityNameAsync(string cityName,
+        public async Task<ForecastWeatherApiResponse> GetFiveDayWeatherForecastByCityNameAsync(string cityName,
             string countryCode = null,
             Unit unit = DefaultUnit,
             SearchAccuracy searchAccuracy = DefaultSearchAccuracy,
@@ -154,15 +154,36 @@ namespace OpenWeatherMap.NetStandard
         {
             if (string.IsNullOrWhiteSpace(countryCode))
                 return await _openWeatherMapApiService
-                    .GetFiveDayWeatherForecastByCityName(cityName: cityName,
+                    .GetFiveDayWeatherForecastByCityNameAsync(cityName: cityName,
                     unit: unit.ToString().ToLower(),
                     searchAccuracy: searchAccuracy.ToString().ToLower(),
                     responseType: responseType.ToString().ToLower(),
                     apiKey: _apiKey);
 
             return await _openWeatherMapApiService
-                .GetFiveDayWeatherForecastByCityNameAndCountryCode(cityName: cityName,
+                .GetFiveDayWeatherForecastByCityNameAndCountryCodeAsync(cityName: cityName,
                 countryCode: countryCode,
+                unit: unit.ToString().ToLower(),
+                searchAccuracy: searchAccuracy.ToString().ToLower(),
+                responseType: responseType.ToString().ToLower(),
+                apiKey: _apiKey);
+        }
+
+        /// <summary>
+        /// Get Five Days Weather Forecast By City Id
+        /// </summary>
+        /// <param name="cityId">City Id</param>
+        /// <param name="unit">Unit</param>
+        /// <param name="searchAccuracy">Search Accuracy. Available options are like (close result) or accurate (accurate result)</param>
+        /// <param name="responseType">Return response in JSON OR XML format. Default response type is JSON</param>
+        /// <returns></returns>
+        public async Task<ForecastWeatherApiResponse> GetFiveDayWeatherForecastByCityIdAsync(string cityId,
+            Unit unit = DefaultUnit,
+            SearchAccuracy searchAccuracy = DefaultSearchAccuracy,
+            ResponseType responseType = DefaultResponseType)
+        {
+            return await _openWeatherMapApiService
+                .GetFiveDayWeatherForecastByCityIdAsync(cityId: cityId,
                 unit: unit.ToString().ToLower(),
                 searchAccuracy: searchAccuracy.ToString().ToLower(),
                 responseType: responseType.ToString().ToLower(),
